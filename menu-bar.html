@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .menu{
+        height: 50px;
+        background-color: rgb(34, 226, 226);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        list-style-type: none;
+    }
+    .menu li{
+        /* height: 50px;
+        width: 50px; */
+        cursor: pointer;
+        padding: 15px;
+        position: relative;
+    }
+    .menu li:hover{
+        color: #fff;
+    }
+    .menu li:hover::after{
+        content: " ";
+        position: absolute;
+        height: 2.5px;
+        width: 70%;
+        background-color: rgb(211, 15, 15);
+        display: block;
+        margin-top: 15px;
+        animation: items .3s linear;
+    }
+    @keyframes items {
+        from{
+            width: 0%;
+        }
+        to{
+            width: 70%;
+        }
+    }
+</style>
+<body>
+    <div class="menu">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Portfolio</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+    </div>
+</body>
+</html>
